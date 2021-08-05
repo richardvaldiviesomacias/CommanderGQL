@@ -30,8 +30,11 @@ namespace CommanderGQL
 
             services.AddGraphQLServer()
                     .AddQueryType<Query>()
+                    .AddMutationType<Mutation>()
                     .AddType<PlatformType>()
-                    .AddType<CommandType>();
+                    .AddType<CommandType>()
+                    .AddFiltering()
+                    .AddSorting();
                 
         }
 
