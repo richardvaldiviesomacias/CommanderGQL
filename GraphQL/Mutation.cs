@@ -43,6 +43,7 @@ namespace CommanderGQL.GraphQL
             context.Commands.Add(command);
             await context.SaveChangesAsync();
             return new AddCommandPayload(command);
+            
         }
     }
 }
